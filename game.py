@@ -1,7 +1,7 @@
 from settings import *
 from random import choice
 from os.path import join
-
+from sys import exit
 
 from timer import Timer
 
@@ -59,7 +59,12 @@ class Game:
         self.current_level = 1
         self.current_score = 0
         self.current_lines = 0
- 
+    
+    def check_game_over(self):
+        for block in self.tetromino.blocks:
+            if block.pos.y < 0:
+                exit()
+
     def calculate_score(self, num_lines):
         self.current_lines += num_lines
         self.current_score += SCORE_DATA[num_lines] * self.current_level
@@ -73,6 +78,7 @@ class Game:
         self.update_score(self.current_lines, self.current_score, self.current_level)
 
     def create_new_tetromino(self):
+        self.check_game_over()
         self.check_finished_rows()
         self.tetromino = Tetromino(
             self.get_next_shape(), 
