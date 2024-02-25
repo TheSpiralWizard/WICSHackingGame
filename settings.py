@@ -24,7 +24,7 @@ WINDOW_HEIGHT = GAME_HEIGHT + GAP * 2
 UPDATE_START_SPEED = 400
 MOVE_WAIT_TIME = 120
 ROTATE_WAIT_TIME = 200
-OFFSET = pygame. Vector2 (NUM_COLS // 2, -1)
+OFFSET = pygame. Vector2 (NUM_COLS // 2, 0)#-1)
 
 # colors
 YELLOW = '#f1e60d'
@@ -39,13 +39,13 @@ LINE_COLOR = '#000000'
 BACKGROUND_COLOR = '#FFFFFF'
 
 TETROMINOS = {
-    'T': {'shape': [(0,0), (-1,0), (1,0), (0,-1)], 'color': PURPLE},
-    'O': {'shape': [(0,0), (0,-1), (1,0), (1,-1)], 'color': YELLOW},
-    'J': {'shape': [(0,0), (0,-1), (0,1), (-1,1)], 'color': BLUE},
-    'L': {'shape': [(0,0), (0,-1), (0,1), (1,1)], 'color': ORANGE},
-    'I': {'shape': [(0,0), (0,-1), (0,-2), (0,1)], 'color': CYAN},
-    'S': {'shape': [(0,0), (-1,0), (0,-1), (1,-1)], 'color': GREEN},
-    'Z': {'shape': [(0,0), (1,0), (0,-1), (-1,-1)], 'color': RED}
+    'T': {'shape': [(-1,0), (-2,0), (0,0), (-1,-1)], 'color': PURPLE},
+    'O': {'shape': [(-1,0), (-1,-1), (0,0), (0,-1)], 'color': YELLOW},
+    'J': {'shape': [(-1,0), (-2,0), (0,0), (-2,-1)], 'color': BLUE},
+    'L': {'shape': [(-1,0), (-2,0), (0,0), (0,-1)], 'color': ORANGE},
+    'I': {'shape': [(0,0), (-2,0), (-1,0), (1,0)], 'color': CYAN},
+    'S': {'shape': [(-1,0), (-2,0), (-1,-1), (0,-1)], 'color': GREEN},
+    'Z': {'shape': [(-1,0), (0,0), (-1,-1), (-2,-1)], 'color': RED}
 }
 
 SCORE_DATA = {1: 40, 2: 100, 3: 300, 4: 1200}
