@@ -14,7 +14,7 @@ class Main:
         pygame.init()
         self.display_surface = pygame.display.set_mode(((WINDOW_WIDTH, WINDOW_HEIGHT)))
         self.clock = pygame.time.Clock()
-        pygame.display.set_caption("MAPTRIS")
+        pygame.display.set_caption("Traveling Tetris")
 
         # shapes
         self.next_shapes = [choice(list(TETROMINOS.keys())) for shape in range(3)]

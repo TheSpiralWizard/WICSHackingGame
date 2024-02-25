@@ -1,1 +1,2 @@
-# WICSHackingGame
+# WICS Hackathon Submission - Traveling Tetris
+
