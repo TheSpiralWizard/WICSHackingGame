@@ -1,7 +1,7 @@
 import pygame
 
 # File Paths (CHANGE THIS FOR PROGRAM TO WORK)
-FILE_PATH = '/Users/gsundaram/Desktop/Hackathon Stuff'
+FILE_PATH = 'Enter/File/Path/Here' # If running this in VSCode, use command 'pwd' and copy that inside these quotation marks
 
 #game size
 NUM_COLS = 10
