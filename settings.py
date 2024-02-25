@@ -1,7 +1,7 @@
 import pygame
 
 # File Paths (CHANGE THIS)
-FILE_PATH = '/Users/arjunrao/Desktop/Fun Stuff/WICSHackingGame'
+FILE_PATH = '/Users/gsundaram/Desktop/Hackathon Stuff'
 
 #game size
 NUM_COLS = 10
