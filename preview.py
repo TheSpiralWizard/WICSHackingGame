@@ -9,7 +9,8 @@ class Preview:
         self.rect = self.surface.get_rect(topright = (WINDOW_WIDTH - GAP, GAP))
         
         # shapes
-        self.shape_surfaces = {shape: load(path.join('/Users/gsundaram/Documents/WICSHackingGame/graphics', f'{shape}.png')).convert_alpha() for shape in TETROMINOS.keys()}
+        
+        self.shape_surfaces = {shape: load(path.join(FILE_PATH + '/graphics', f'{shape}.png')).convert_alpha() for shape in TETROMINOS.keys()}
 
         # image pos data
         self.increment_height = self.surface.get_height() / 3

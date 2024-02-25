@@ -1,10 +1,25 @@
 from settings import *
 from random import choice
+from os.path import join
+
 
 from timer import Timer
 
 class Game:
     def __init__(self, get_next_shape, update_score):
+
+        self.maps = [
+			pygame.image.load(join(FILE_PATH, 'MapImages/l1.png')), 
+			pygame.image.load(join(FILE_PATH, 'MapImages/l2.png')), 
+			pygame.image.load(join(FILE_PATH, 'MapImages/l3.png')), 
+			pygame.image.load(join(FILE_PATH, 'MapImages/l4.png')), 
+			pygame.image.load(join(FILE_PATH, 'MapImages/l5.png')),
+			pygame.image.load(join(FILE_PATH, 'MapImages/l6.png')), 
+			pygame.image.load(join(FILE_PATH, 'MapImages/l7.png')), 
+			pygame.image.load(join(FILE_PATH, 'MapImages/l8.png')), 
+			pygame.image.load(join(FILE_PATH, 'MapImages/l9.png')),
+		]
+        self.mapIndex = 0
 
         self.surface = pygame.Surface((GAME_WIDTH, GAME_HEIGHT))
         self.display_surface = pygame.display.get_surface()
@@ -139,21 +154,27 @@ class Game:
         
             #update score
             self.calculate_score(len(delete_rows))
+            self.mapIndex += 1
 
     def run(self):
 
-        # update
+		# update
         self.input()
         self.timer_update()
         self.sprites.update()
 
-        # drawing
-        self.surface.fill(GRAY)
+        # drawing 
+        self.surface.fill(BACKGROUND_COLOR)
+
+        if(self.mapIndex >= len(self.maps)):
+            self.mapIndex = 0
+
+        self.surface.blit(self.maps[self.mapIndex], (PADDING - 20, PADDING - 20))
         self.sprites.draw(self.surface)
 
         self.draw_grid()
-        self.display_surface.blit(self.surface, (GAP,GAP))
-        pygame.draw.rect(self.display_surface, LINE_COLOR, self.rect, 2, 5)
+        self.display_surface.blit(self.surface, (PADDING,PADDING))
+        pygame.draw.rect(self.display_surface, LINE_COLOR, self.rect, 2, 2)
 
 class Block(pygame.sprite.Sprite):
 
