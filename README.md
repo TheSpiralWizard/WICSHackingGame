@@ -6,4 +6,4 @@ Traveling Tetris is meant to be a spin on the TETRIS game implemented in Pygame 
 
 We followed his tutorial to understand and recreate the TETRIS game using Pygame, then added aesthetic and quality of life changes to make the game a smoother experience and allow you to travel the world as you clear the lines of each level! Hope you have fun!
 
-Submitted for UVA's Women in Computer Science Hack The Map Hackathon
+Submitted for UVA's Women in Computing Sciences Hack The Map Hackathon

@@ -1,7 +1,7 @@
 import pygame
 
 # File Paths (CHANGE THIS FOR PROGRAM TO WORK)
-FILE_PATH = 'Enter/File/Path/Here' # If running this in VSCode, use command 'pwd' and copy that inside these quotation marks
+FILE_PATH = '/Users/gsundaram/Desktop/Hackathon Stuff'
 
 #game size
 NUM_COLS = 10
@@ -21,7 +21,7 @@ WINDOW_WIDTH = GAME_WIDTH + SIDEBAR_WIDTH + GAP * 3
 WINDOW_HEIGHT = GAME_HEIGHT + GAP * 2
 
 # game behaviour
-UPDATE_START_SPEED = 150
+UPDATE_START_SPEED = 400
 MOVE_WAIT_TIME = 120
 ROTATE_WAIT_TIME = 200
 OFFSET = pygame. Vector2 (NUM_COLS // 2, -1)
